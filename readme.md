@@ -1,13 +1,14 @@
-#.ENV-SWITCHER
-###EASY SWICHING .ENV FILES
 
-##Install
+# .ENV-SWITCHER <br>
+### EASY SWICHING .ENV FILES
+
+## Install
 download sourcecode.
 ```
 $ npm install -g
 ```
 
-##Setting your project up
+## Setting your project up
 1. Make a directory name of `env-presets`.  
 Should be better hide the directory as `.env-presets`.
 
