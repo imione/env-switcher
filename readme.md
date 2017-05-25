@@ -5,7 +5,7 @@
 ## Install
 download sourcecode.
 ```
-$ npm install -g
+$ npm install -g env-switcher
 ```
 
 ## Setting your project up
