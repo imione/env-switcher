@@ -14,13 +14,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imione/env-changer.git"
+    "url": "git+https://github.com/imione/env-switcher.git"
   },
   "keywords": [
     "env"
   ],
   "bugs": {
-    "url": "https://github.com/imione/env-changer/issues"
+    "url": "https://github.com/imione/env-switcher/issues"
   },
-  "homepage": "https://github.com/imione/env-changer#readme"
+  "homepage": "https://github.com/imione/env-switcher#readme"
 }
