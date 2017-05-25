@@ -1,0 +1,26 @@
+{
+  "name": "env-switcher",
+  "version": "0.8.0",
+  "description": "nodejs module for swiching env files",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./bin/env-switch"
+  },
+  "bin": {
+    "envswitch": "./bin/env-switch"
+  },
+  "preferGlobal": true,
+  "author": "Soohyun Kim <imione9@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imione/env-changer.git"
+  },
+  "keywords": [
+    "env"
+  ],
+  "bugs": {
+    "url": "https://github.com/imione/env-changer/issues"
+  },
+  "homepage": "https://github.com/imione/env-changer#readme"
+}
