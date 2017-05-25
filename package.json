@@ -1,6 +1,6 @@
 {
   "name": "env-switcher",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "nodejs module for swiching env files",
   "main": "index.js",
   "scripts": {
