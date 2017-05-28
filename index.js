@@ -6,7 +6,12 @@ function envSwitcher(params) {
   if (params.length < 3) {
     return console.log(PARAM_ERROR);
   }
-  return switcher.switcher(params);
+
+  if (params[2] === 'init') { // init command
+    return switcher.initialize(params);
+  }
+
+  return switcher.switcher(params[2]);
 }
 
 exports.envSwitcher = envSwitcher;
