@@ -33,12 +33,9 @@ example:
 ```
 You can choose any names as your own `envs`.
 ## Usage
-
-Now it supports only this command.
 ```
 $ envswitch use <env_name>
 ```
-
 For example, you wanna change your .env files as development environment.  
 (When you made your own env files `dev` in `.envswitcher`.)
 ```text
