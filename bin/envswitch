@@ -11,10 +11,12 @@ const notifier = updateNotifier({ pkg });
 notifier.notify();
 
 program
-  .version('1.0.0');
+  .version('1.0.0')
+  .usage('[command] [options] <env_name>');
 
 program
   .command('init')
+  .description('initialize your project. eg., $envswitch init -e dev')
   .option('-e, --env <envname>', '.ENV name which you want to make default')
   .action((envname) => {
     index.envSwitcher.initialize(envname);
@@ -22,28 +24,23 @@ program
 
 program
   .command('use <envname>')
+  .description('choose .env you want to use')
   .action((envname) => {
     index.envSwitcher.switcher(envname);
   });
 
 program
   .command('list')
+  .description('list up your .env settings')
   .action(() => {
     index.envSwitcher.listEnvFiles();
   });
 
 program
   .command('status')
+  .description('show your .env setting status')
   .action(() => {
     index.envSwitcher.showStatus();
   });
-
-program.on('--help', () => {
-  console.log('  Examples:');
-  console.log('');
-  console.log('    $ custom-help --help');
-  console.log('    $ custom-help -h');
-  console.log('');
-});
 
 program.parse(process.argv);
