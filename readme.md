@@ -1,28 +1,32 @@
 
 # .ENV-SWITCHER <br>
 ### EASY SWICHING .ENV FILES
+If you apply .env modules to your service, .env files need to be handled .<br>
+As you divide your service into micro services, .env files are getting more like tribbles.<br>
+I hope you can manage your envs easily without any mistakes with this cli.
 
 ## Install
-download sourcecode.
 ```
 $ npm install -g env-switcher
 ```
 
 ## Setting your project up
-1. Make a directory name of `env-presets`.  
-Should be better hide the directory as `.env-presets`.
-
-2. Let `Git` ignore it.
+Move into your project directory.
+1. Initialize env-switcher for your project.
 ```text
-# env-presets
-.env-presets
+$ envswitch init <env_name>
 ```
-* For ElasticBeanstalk users: it should be added to `.ebignore` as well.
+- you can run without env_name parameter, then your default name of env setting is: 'default'
+```text
+$ envswitch init
+```
+- Then `.envswitcher` will be automatically added to `.gitignore` if it exists.
+* For ElasticBeanstalk users: it should be added to `.ebignore` manually.
 
-3. Put env files into `.env-presets`.  
+2. Put env files into `.envswitcher`.  
 example:
 ```text
-.env-presets
+.envswitcher
 |-dev
 |-prod
 |-...
@@ -32,19 +36,34 @@ You can choose any names as your own `envs`.
 
 Now it supports only this command.
 ```
-$ envswitch ENV-NAME
+$ envswitch use <env_name>
 ```
 
 For example, you wanna change your .env files as development environment.  
-(When you made your own env files `dev` in `.env-presets`.)
+(When you made your own env files `dev` in `.envswitcher`.)
 ```text
-$ envswitch dev
+$ envswitch use dev
 ```
 Put the command below to swtich environment as production.
 ```text
-$ envswitch prod
+$ envswitch use prod
 ```
 And you wanna change environment to `mytest`
 ```text
-$envswitch mytest
+$ envswitch use mytest
+```
+## More Commands
+##### - list your env files
+```text
+$ envswitch list
+```
+
+##### - check the status of your environment
+```text
+$ envswitch status
+```
+
+##### - help
+```text
+$ envswitch --help
 ```
