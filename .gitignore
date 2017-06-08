@@ -1,0 +1,8 @@
+.idea
+
+.idea/env-switcher.iml
+.idea/modules.xml
+npm-debug.log
+
+#.env
+.env
