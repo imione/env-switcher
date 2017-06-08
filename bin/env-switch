@@ -1,5 +1,35 @@
 #!/usr/bin/env node
 
+const program = require('commander');
+
 const index = require('../index');
 
-index.envSwitcher(process.argv);
+program
+  .version('1.0.0');
+
+program
+  .command('init [options]')
+  .option('-e, --env <envname>', '.ENV name which you want to make default')
+  .action((envname) => {
+    index.envSwitcher.initialize(envname);
+  });
+
+program
+  .command('use <envname>')
+  .action((envname) => {
+    index.envSwitcher.switcher(envname);
+  });
+
+program
+  .command('list')
+  .action(() => {
+    index.envSwitcher.listEnvFiles();
+  });
+
+program
+  .command('status')
+  .action(() => {
+    index.envSwitcher.showStatus();
+  });
+
+program.parse(process.argv);
