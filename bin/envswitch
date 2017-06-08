@@ -17,9 +17,12 @@ program
 program
   .command('init')
   .description('initialize your project. eg., $envswitch init -e dev')
-  .option('-e, --env <envname>', '.ENV name which you want to make default')
   .action((envname) => {
-    index.envSwitcher.initialize(envname);
+    if (typeof envname === 'object') {
+      index.envSwitcher.initialize();
+    } else {
+      index.envSwitcher.initialize(envname);
+    }
   });
 
 program
