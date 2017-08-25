@@ -33,6 +33,11 @@ program
   });
 
 program
+  .command('update <envname>')
+  .description('update .env you just modified')
+  .action(envname => index.envSwitcher.updateEnv(envname));
+
+program
   .command('list')
   .description('list up your .env settings')
   .action(() => {
