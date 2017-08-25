@@ -17,7 +17,7 @@
     "url": "git+https://github.com/imione/env-switcher.git"
   },
   "keywords": [
-    "env"
+    "env", "dot-env", ".env", "environment"
   ],
   "bugs": {
     "url": "https://github.com/imione/env-switcher/issues"
