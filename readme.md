@@ -23,7 +23,7 @@ $ envswitch init
 - Then `.envswitcher` will be automatically added to `.gitignore` if it exists.
 * For ElasticBeanstalk users: it should be added to `.ebignore` manually.
 
-2. Put env files into `.envswitcher`.  
+2. Put env files into `.envswitcher`.
 example:
 ```text
 .envswitcher
@@ -54,7 +54,10 @@ $ envswitch use mytest
 ```text
 $ envswitch list
 ```
-
+##### - update .env file as <env_name> if you modified it
+```text
+$ envswitch update <env_name>
+```
 ##### - check the status of your environment
 ```text
 $ envswitch status
@@ -64,3 +67,8 @@ $ envswitch status
 ```text
 $ envswitch --help
 ```
+
+
+### Update Log
+#### v1.1.0
+- add a command `update <env_name>`
