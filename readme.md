@@ -1,7 +1,7 @@
 
 # .ENV-SWITCHER <br>
-### EASY SWICHING .ENV FILES
-If you apply `.env` modules to your service, `.env` files need to be handled .<br>
+### EASY SWITCHING .ENV FILES
+If you apply `.env` modules to your service, `.env` files need to be handled.<br>
 As you divide your service into micro services, `.env` files are getting more like tribbles.<br>
 I hope you can manage your envs easily without any mistakes with this cli.
 
