@@ -16,7 +16,7 @@ program
 
 program
   .command('init')
-  .description('initialize your project. eg., $envswitch init -e dev')
+  .description('initialize your project. eg., $envswitch init dev')
   .action((envname) => {
     if (typeof envname === 'object') {
       index.envSwitcher.initialize();
